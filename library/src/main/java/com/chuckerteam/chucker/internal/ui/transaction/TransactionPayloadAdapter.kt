@@ -119,6 +119,7 @@ internal sealed class TransactionPayloadViewHolder(view: View) : RecyclerView.Vi
     ) : TransactionPayloadViewHolder(bodyBinding.root) {
         override fun bind(item: TransactionPayloadItem) {
             if (item is TransactionPayloadItem.BodyLineItem) {
+                bodyBinding.bodyLine.textSize = 10F
                 bodyBinding.bodyLine.text = item.line
             }
         }
